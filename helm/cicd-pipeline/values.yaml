@@ -9,7 +9,7 @@ replicaCount: 1
 image:
   repository: 823729324830.dkr.ecr.us-east-1.amazonaws.com/cicd-pipeline-git
   pullPolicy: Always
-  tag: "c439edee816f342a717f0c603e73aa4ea48617f5"
+  tag: "698162360127963c11dcc4e598dd3d58dbe53d6f"
 containerPort: 8080
 
 # This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
