@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: cicd-pipeline
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: cicd-pipeline
+
+  template:
+    metadata:
+      labels:
+        app: cicd-pipeline
+
+    spec:
+      imagePullSecrets:
+      - name: ecr-secret
+
+      containers:
+      - name: cicd-pipeline
+        image: 823729324830.dkr.ecr.us-east-1.amazonaws.com/cicd-pipeline-git:v1
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 8080
